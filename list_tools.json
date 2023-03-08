@@ -1,0 +1,14 @@
+{
+	"math":[
+		{
+			"name":"algebraic_calc",
+			"description":"Calculate the value of the algebraic expression",
+			"icon":"./assets/images/icon/math/function.png"
+		},
+		{
+			"name": "a",
+			"description": "Calculate the value of the algebraic expression",
+			"icon": ""
+		}
+	]
+}
