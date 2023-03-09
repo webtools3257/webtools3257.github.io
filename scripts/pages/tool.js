@@ -33,6 +33,7 @@ if ((!group || !name) || (group == 'null' || name == "null")) {
 								.catch(() => {
 									spinner_1.style.display = 'none'
 									container.html = `
+										<h1>☹️</h1>
 										<h3>Cannot load tool !</h3>
 										<br><br>
 										<a class="btn btn-outline-normal" href="./index.html" > Return </a>

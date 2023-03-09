@@ -12,9 +12,10 @@ turtle.component({
 					<li><a href="${origin}/index.html">Home</a></li>
 					<li><a href="${origin}/report.html">Report</a></li>
 				</ul>
-				<button data-control="navbar" data-action="toggle" data-navbar="#navbar1" class="navbar-mobile-btn-close">close</button>
+				<button data-control="navbar" data-action="toggle" data-navbar="#navbar1" class="navbar-mobile-btn-close">
+					<i class="fa fa-bars " style="font-size: 20px;" data-control="navbar" data-action="toggle" data-navbar="#navbar1"></i>
+				</button>
 			</nav>
-		
 		`
 	}
 })

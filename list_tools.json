@@ -1,14 +1,14 @@
 {
 	"math":[
 		{
-			"name":"algebraic_calc",
-			"description":"Calculate the value of the algebraic expression",
-			"icon":"./assets/images/icon/math/function.png"
+			"name": "algebraic_calc",
+			"description": "Calculate the value of the algebraic expression",
+			"icon": "https://freesvg.org/img/ftfunct.png"
 		},
 		{
-			"name": "a",
-			"description": "Calculate the value of the algebraic expression",
-			"icon": ""
+			"name":"integral_calc",
+			"description":"Calculate the value of the algebraic expression",
+			"icon":"https://freesvg.org/img/mono-integral-func.png"
 		}
 	]
 }
