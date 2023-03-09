@@ -1,0 +1,8 @@
+[
+	{
+		"name":"algebra_calc",
+		"icon":"https://freesvg.org/img/ftfunct.png",
+		"description":"Calculate the value of the algebraic expression",
+		"group":"Math"
+	}
+]

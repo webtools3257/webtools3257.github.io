@@ -7,22 +7,27 @@
 	<title>Web tools</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://smtdfcrepo.github.io/storage/turtle/main.css">
-	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="../../styles/main.css">
 </head>
 
 <body>
 	<s-navbar></s-navbar>
-	<div class="main-container animate__animated animate__fadeInUp" id="container">
+	<div class="main-container animate__animated animate__fadeInUp" style="animation-duration: 0.7s;" id="container">
+
 		<div id="spinner1" class="item">
 			<div class="spinner"></div>
 			<span>Loading . . . .</span>
 		</div>
+		<br>
 	</div>
 	<script src="https://smtdfcrepo.github.io/storage/turtle/core.turtle.js"></script>
 	<script src="https://smtdfcrepo.github.io/storage/turtle/ui.turtle.js"></script>
-	<script src="./scripts/components.js"></script>
-	<script src="./scripts/loader.js"></script>
-	<script src="./scripts/pages/tool.js"></script>
+	<script src="https://unpkg.com/mathjs@11.6.0/lib/browser/math.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+	<script src="https://unpkg.com/nerdamer@1.1.13/all.min.js"></script>
+	<script src="../../Core/main.js"></script>
+	<script src="./scripts/main.js"></script>
 </body>
 
 </html>
