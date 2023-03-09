@@ -1,3 +1,4 @@
+let eq = getParameterByName("eq")
 const mj = function(tex) {
 	return MathJax.tex2svg(tex, { em: 16, ex: 6, display: false });
 }
@@ -35,11 +36,16 @@ function evalExpr(expression) {
 	}
 }
 
+
+
 turtle.component({
 	name: "s-main",
 	afterRender: function() {
 		let expr = document.getElementById("expr")
-		expr.oninput = function() {
+		let getLinkBtn = document.getElementById("btnGetLink")
+		let linkDisplay = document.getElementById("link")
+
+		function main() {
 			let node = parseExpr(expr.value)
 			displayMathFormula(pretty, node)
 			expr.classList.remove("invalid")
@@ -55,9 +61,33 @@ turtle.component({
 				result.appendChild(mj(res.result))
 			}
 		}
+
+		function getLink() {
+			let link = `${window.location}&?eq=${expr.value}`
+				linkDisplay.innerHTML = `Your Link : <a href="${link}"> ${link}</a>`
+
+			try {
+				navigator.clipboard.writeText(`${window.location}&?eq=${expr.value}`);
+				alert("Copied !")
+			} catch (e) {
+							}
+		}
+
+
+		if (eq) {
+			expr.value = eq
+			main()
+		}
+		expr.oninput = function() {
+			linkDisplay.innerHTML = ""
+			main()
+		}
+		getLinkBtn.onclick = getLink
 	},
 	render: function() {
 		return `
+		<div id="link" ></div>
+		
 		<h3>Input the expression</h3>
 		<div class="card" >
 			<div class="card-content item">
@@ -77,7 +107,8 @@ turtle.component({
 			<div class="card-content item" id="result" >
 			</div> 
 		</div>
-		<br >
+		<br>
+		<button id="btnGetLink" class="btn btn-outline-success"  >Copy link</button>
 		`
 	}
 })
