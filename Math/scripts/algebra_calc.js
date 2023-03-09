@@ -63,7 +63,7 @@ turtle.component({
 		}
 
 		function getLink() {
-			let link = `${window.location}&?eq=${expr.value}`
+			let link = `${window.location.origin}/Math/index.html?name=algebra_calc&?eq=${expr.value}`
 				linkDisplay.innerHTML = `Your Link : <a href="${link}"> ${link}</a>`
 
 			try {
